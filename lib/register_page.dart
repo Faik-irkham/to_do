@@ -215,8 +215,10 @@ class _RegisterPageState extends State<RegisterPage> {
 
       // Jika berhasil mendaftar, Anda dapat menavigasi pengguna ke halaman beranda atau melakukan tindakan lainnya
     } catch (e) {
+      // ignore: avoid_print
       print("Error: $e");
 
+      // ignore: use_build_context_synchronously
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         content: Text("Terjadi kesalahan saat mendaftar: $e"),
         duration: const Duration(seconds: 5), // Atur durasi tampilan snackbar
